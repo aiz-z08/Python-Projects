@@ -5,12 +5,12 @@ num = random.randint(lb,ub)
 numOfTries=0
 while (True):
     n = int(input("Guess the number: "))
+    numOfTries+=1
     if n==num:
         print(f"{n} -> Correct")
         print(f"Total Guesses: {numOfTries}")
         break
     else:
-        numOfTries+=1
         if (n>num):
             print(f"{n} -> Too High")
         elif (n<num):
