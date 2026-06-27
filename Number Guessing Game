@@ -1,0 +1,19 @@
+import random
+lb = int(input("Enter lower bound: "))
+ub = int(input("Enter upper bound: "))
+num = random.randint(lb,ub)
+numOfTries=0
+while (True):
+    n = int(input("Guess the number: "))
+    if n==num:
+        print(f"{n} -> Correct")
+        print(f"Total Guesses: {numOfTries}")
+        break
+    else:
+        numOfTries+=1
+        if (n>num):
+            print(f"{n} -> Too High")
+        elif (n<num):
+            print(f"{n} -> Too Low")
+        else:
+            print("Number out of range")
